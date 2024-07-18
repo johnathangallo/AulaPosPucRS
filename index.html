@@ -1,0 +1,54 @@
+<!--
+<main>
+    <header>
+        <div class="close-area"></div>
+        <input placeholder="https://..." value="https://mariosouto.com" />
+    </header>
+     <iframe src="https://mariosouto.com"></iframe> 
+</main> 
+-->
+<!DOCTYPE html> <!-- "! + Enter" - Gera uma página html com estrutura simples-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Meta para corrigir problemas de pontuação e acentos nas palavras da página "É, ç, ?, etc."-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Esta meta ajusta a tela de acordo com o dispositivo utilizado, cekulares, tablets e pcs-->
+    <title>Mini Browser Experimental</title>  <!-- Título principal da página-->
+</head>
+<body>
+   
+</body>
+</html>
+
+<script>
+//"{}" cria um objeto: Representa coisas com múltiplos atributos para representá-las
+var aba01 = {
+    titulo: 'Titulo da aba 1',
+    url: 'https://docs.google.com/spreadsheets/d/1El9UJUYnN-zg40tE6BiXdK7atT3JarE5/edit#gid=456145522'
+};
+var aba02 = {
+    titulo: 'Titulo da aba 2',
+    url: 'https://translate.google.com/?sl=auto&tl=pt&text=Warning%3A%20Don%E2%80%99t%20paste%20code%20into%20the%20DevTools%20Console%20that%20you%20don%E2%80%99t%20understand%20or%20haven%E2%80%99t%20reviewed%20yourself.%20This%20could%20allow%20attackers%20to%20steal%20your%20identity%20or%20take%20control%20of%20your%20computer.%20Please%20type%20%E2%80%98allow%20pasting%E2%80%99%20below%20and%20hit%20Enter%20to%20allow%20pasting.&op=translate'
+};
+// Arrays: Listas de coisas
+// ENTRADAS
+const abas = [
+    aba01,
+    aba02
+];
+// PROCESSAMENTO
+for(aba of abas){
+    console.log (aba.titulo);
+
+    // OUTPUT
+    var ValorAtualHTML = document.body.innerHTML;
+    document.body.innerHTML = ValorAtualHTML +  `<li><a href="${aba.url}">${aba.titulo}<a/></li>` ;
+};
+
+
+// O que tem no navegador?
+// [ ] título
+// [X]url
+</script>
+
+
+<!--<link rel="stylesheet" href="./style.css" /> -->
